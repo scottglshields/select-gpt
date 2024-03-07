@@ -60,6 +60,35 @@ document.addEventListener("DOMContentLoaded", async () => {
     getSelectedText();
 });
 
+document.addEventListener("DOMContentLoaded", async () => {
+			const outputElement = document.getElementById('output');
+			const copyBtn = document.getElementById('copyBtn');
+			copyBtn.addEventListener('click', () => {
+				copyToClipboard(outputElement.value);
+				copyBtn.textContent = "Copied 🎉"; // Change button text to "Copied" on click
+				copyBtn.classList.add('copied'); // Add 'copied' class for styling
+				setTimeout(() => {
+					copyBtn.textContent = "Copy"; // Change button text back to "Copy" after 1500ms
+					copyBtn.classList.remove('copied'); // Remove 'copied' class
+				}, 2500);
+			});
+			const copyToClipboard = (text) => {
+				const textarea = document.createElement('textarea');
+				textarea.value = text;
+				document.body.appendChild(textarea);
+				textarea.select();
+				document.execCommand('copy');
+				document.body.removeChild(textarea);
+			};
+			// Listen for changes in the output textarea value
+			outputElement.addEventListener('input', () => {
+				if (copyBtn.textContent === "Copied") {
+					copyBtn.textContent = "Copy";
+					copyBtn.classList.remove('copied');
+				}
+			});
+		});
+
 
 // 	document.addEventListener("DOMContentLoaded", async () => {
 
