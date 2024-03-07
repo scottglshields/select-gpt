@@ -1,54 +1,51 @@
 @font-face {
-    font-family: proxima-nova;
-    src: url("assets/fonts/Proxima-Nova-Font.otf");
+	font-family: Poppins;
+	src: url("assets/fonts/Poppins.ttf");
 }
-
+* {
+	box-sizing: border-box;
+	font-family: Poppins, sans-serif;
+	margin: 0;
+	padding: 0;
+}
 body {
-    background-color: #353441;
-    font-family: proxima-nova;
-    width:400px;
-    height:400px;
+	background-color: #222;
+	color: #fff;
+	min-height: 400px;
+	max-width: 65ch;
+	padding: .5rem;
 }
-
-h1 {
-    color: #fff
+main {
+	display: grid;
+	gap: 1rem;
+	padding: .25rem;
 }
-
-.editable {
-    font-family: proxima-nova;
-    resize: none;
-    background-color: #454754;
-    color: #D1D5CA;
-    font-size: 3.75vh;
-    width: 94vw;
-    border: 0px;
-    border-radius: 2px;
-    padding: 1vw;
-    overflow-y: scroll;
+fieldset {
+	border: 1px solid transparent;padding:.25ch;
 }
-
-.editable:empty:before {
-    content: attr(placeholder);
-    opacity: 0.5
+label {
+	display: block;
+	margin-block: 1rem 0;
 }
-
-.editable::-webkit-scrollbar {
-    width: 0 !important
+textarea {
+	background-color: #444;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	color: #ccc;
+	font-size: 1rem;
+	min-height: 2lh;
+	padding: 1ch;
+	resize: vertical;
+	width: 100%;
 }
-
-#input {
-    height: 60px
-}
-
 #output {
-    height: 270px;
+	min-height: 10lh;
 }
 
 a {
-    text-decoration: none;
-    color: #16e16e;
+	color: #34a853;
 }
 
 a:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
