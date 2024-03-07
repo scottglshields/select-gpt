@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>select-gpt</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>select-gpt</title>
 
-    <link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1>select-gpt</h1>
-    <div class="editable" contenteditable="false" id="input" placeholder="Loading..."></div><br/>
-    <div class="editable" contenteditable="false" id="output"></div>
 
-    <script src="./popup.js"></script>
+<body>
+	<main>
+		<h1>select-gpt</h1>
+
+		<fieldset>
+			<label for="input">Input</label>
+			<textarea name="input" id="input"></textarea>
+		</fieldset>
+		
+		<fieldset>
+			<label for="output">Output</label>
+			<textarea name="output" id="output"></textarea>
+		</fieldset>
+		
+	</main>
+	<script src="./popup.js"></script>
 </body>
+
 </html>
